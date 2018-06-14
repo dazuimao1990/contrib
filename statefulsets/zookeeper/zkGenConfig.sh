@@ -13,8 +13,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-[[ DEBUG ]] && set -x
-[[ PAUSE ]] && sleep ${PAUSE}
+if [[ DEBUG ]];then
+  set -x
+fi
+if [[ -n ${PAUSE} ]];then
+  sleep ${PAUSE}
+fi
 ZK_USER=${ZK_USER:-"zookeeper"}
 ZK_LOG_LEVEL=${ZK_LOG_LEVEL:-"INFO"}
 ZK_DATA_DIR=${ZK_DATA_DIR:-"/var/lib/zookeeper/data"}
