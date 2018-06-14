@@ -166,3 +166,4 @@ create_config
 create_log_props 
 create_data_dirs 
 create_java_env
+exec zkServer.sh start-foreground
