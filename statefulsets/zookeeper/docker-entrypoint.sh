@@ -192,6 +192,7 @@ if [[ "${JAVA_OPTS}" == *-Xmx* ]]; then
 else
   default_java_opts="${default_java_mem_opts} -Dfile.encoding=UTF-8"
   export JAVA_OPTS="${default_java_opts} $JAVA_OPTS"
+fi
   
 function create_java_env() {
     rm -f $JAVA_ENV_FILE
